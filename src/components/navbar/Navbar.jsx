@@ -2,6 +2,9 @@ import Image from 'next/image';
 import styles from './navbar.module.css';
 import Link from 'next/link';
 
+import ThemeToggle from '../themeToggle/ThemeToggle';
+import AuthLinks from '../authLinks/AuthLinks';
+
 const Navbar = () => {
   return (
     <div className={styles.container}>
@@ -13,9 +16,11 @@ const Navbar = () => {
       </div>
       <div className={styles.logo}>rcpblog</div>
       <div className={styles.links}>
+        <ThemeToggle />
         <Link href='/'>Homepage</Link>
         <Link href='/'>Contact</Link>
         <Link href='/'>About</Link>
+        <AuthLinks />
       </div>
     </div>
   )
